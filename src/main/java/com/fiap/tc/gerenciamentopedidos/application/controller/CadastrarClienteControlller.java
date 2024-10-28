@@ -3,6 +3,7 @@ package com.fiap.tc.gerenciamentopedidos.application.controller;
 import com.fiap.tc.gerenciamentopedidos.domain.entity.Cliente;
 import com.fiap.tc.gerenciamentopedidos.application.input.CadastrarClienteRequest;
 import com.fiap.tc.gerenciamentopedidos.application.output.ClienteResponse;
+import com.fiap.tc.gerenciamentopedidos.domain.mapper.ClienteDtoMapper;
 import com.fiap.tc.gerenciamentopedidos.domain.usecase.CadastrarClienteUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -2,6 +2,7 @@ package com.fiap.tc.gerenciamentopedidos.infra.adapter.repository;
 
 import com.fiap.tc.gerenciamentopedidos.domain.entity.Cliente;
 import com.fiap.tc.gerenciamentopedidos.domain.gateway.CadastrarClienteInterface;
+import com.fiap.tc.gerenciamentopedidos.infra.repository.mapper.ClienteEntityMapper;
 import com.fiap.tc.gerenciamentopedidos.infra.entity.ClienteEntity;
 import com.fiap.tc.gerenciamentopedidos.infra.repository.ClienteRepository;
 import lombok.RequiredArgsConstructor;

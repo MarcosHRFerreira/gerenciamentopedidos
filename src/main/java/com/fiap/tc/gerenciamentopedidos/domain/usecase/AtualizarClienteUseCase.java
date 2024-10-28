@@ -2,7 +2,6 @@ package com.fiap.tc.gerenciamentopedidos.domain.usecase;
 
 import com.fiap.tc.gerenciamentopedidos.domain.entity.Cliente;
 import com.fiap.tc.gerenciamentopedidos.domain.gateway.AtualizarClienteInterface;
-import com.fiap.tc.gerenciamentopedidos.domain.gateway.BuscarClientePorIdInterface;
 
 public class AtualizarClienteUseCase {
 
@@ -17,10 +16,6 @@ public class AtualizarClienteUseCase {
 
     public Cliente atualizarCliente(Long id, Cliente cliente){
         Cliente clienteBuscado = buscarClientePorIdUseCase.buscarClientePorId(id);
-
-        if(clienteBuscado.getClienteId()==null) {
-             return null;
-        }
 
         clienteBuscado.setNome(cliente.getNome());
         clienteBuscado.setEmail(cliente.getEmail());

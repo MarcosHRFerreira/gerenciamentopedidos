@@ -22,6 +22,19 @@ public class ClienteEntity {
     private String email;
     @NonNull
     private String telefone;
+    @NonNull
+    private String logradouro;
+    @NonNull
+    private String bairro;
+    @NonNull
+    private String cep;
+    private String complemento;
+    @NonNull
+    private String numero;
+    @NonNull
+    private String uf;
+    @NonNull
+    private String cidade;
 
 
 }

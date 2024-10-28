@@ -1,8 +1,8 @@
 package com.fiap.tc.gerenciamentopedidos.infra.adapter.repository;
 
 import com.fiap.tc.gerenciamentopedidos.domain.entity.Cliente;
-import com.fiap.tc.gerenciamentopedidos.domain.exception.ClienteNotFoundException;
 import com.fiap.tc.gerenciamentopedidos.domain.gateway.BuscarClientePorIdInterface;
+import com.fiap.tc.gerenciamentopedidos.infra.repository.mapper.ClienteEntityMapper;
 import com.fiap.tc.gerenciamentopedidos.infra.entity.ClienteEntity;
 import com.fiap.tc.gerenciamentopedidos.infra.repository.ClienteRepository;
 import org.springframework.stereotype.Component;
@@ -23,7 +23,5 @@ public class BuscaClientePorIdAdapter implements BuscarClientePorIdInterface {
 
        return clienteEntityMapper.toClienteResponse(clienteBuscado);
     }
-
-
 
 }
