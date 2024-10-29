@@ -1,6 +1,6 @@
-package com.fiap.tc.gerenciamentopedidos.application.input;
+package com.fiap.tc.gerenciamentopedidos.domain.output;
 
-public record AtualizarClienteRequest(
+public record ClienteResponse(
         Long clienteId,
         String nome,
         String email,

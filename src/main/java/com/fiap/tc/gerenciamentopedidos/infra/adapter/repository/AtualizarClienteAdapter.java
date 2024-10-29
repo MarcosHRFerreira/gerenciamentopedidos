@@ -14,7 +14,7 @@ public class AtualizarClienteAdapter implements AtualizarClienteInterface {
 
     private final ClienteRepository clienteRepository;
     private final ClienteEntityMapper clienteEntityMapper;
-    private final BuscaClientePorIdAdapter buscaClientePorIdAdapter;
+    private final BuscarClientePorIdAdapter buscarClientePorIdAdapter;
 
     @Override
     public Cliente atualizarCliente(Long id, Cliente cliente){

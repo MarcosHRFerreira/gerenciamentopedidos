@@ -1,6 +1,7 @@
 package com.fiap.tc.gerenciamentopedidos.infra.adapter.repository;
 
 import com.fiap.tc.gerenciamentopedidos.domain.entity.Cliente;
+import com.fiap.tc.gerenciamentopedidos.domain.entity.validation.ValidationCliente;
 import com.fiap.tc.gerenciamentopedidos.domain.gateway.CadastrarClienteInterface;
 import com.fiap.tc.gerenciamentopedidos.infra.repository.mapper.ClienteEntityMapper;
 import com.fiap.tc.gerenciamentopedidos.infra.entity.ClienteEntity;
@@ -17,6 +18,11 @@ public class CadastrarClienteAdapter implements CadastrarClienteInterface {
 
     @Override
     public Cliente cadastraCliente(Cliente cliente){
+
+        ValidationCliente validator = new ValidationCliente(cliente);
+
+        validator.validar();
+
         ClienteEntity clienteEntity=clienteEntityMapper.toEntity(cliente);
         ClienteEntity novoCliente =  clienteRepository.save(clienteEntity);
         return clienteEntityMapper.toClienteResponse(novoCliente);

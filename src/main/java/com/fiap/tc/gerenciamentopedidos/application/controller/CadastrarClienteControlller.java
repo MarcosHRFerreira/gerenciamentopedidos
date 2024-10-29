@@ -1,8 +1,8 @@
 package com.fiap.tc.gerenciamentopedidos.application.controller;
 
 import com.fiap.tc.gerenciamentopedidos.domain.entity.Cliente;
-import com.fiap.tc.gerenciamentopedidos.application.input.CadastrarClienteRequest;
-import com.fiap.tc.gerenciamentopedidos.application.output.ClienteResponse;
+import com.fiap.tc.gerenciamentopedidos.domain.input.CadastrarClienteRequest;
+import com.fiap.tc.gerenciamentopedidos.domain.output.ClienteResponse;
 import com.fiap.tc.gerenciamentopedidos.domain.mapper.ClienteDtoMapper;
 import com.fiap.tc.gerenciamentopedidos.domain.usecase.CadastrarClienteUseCase;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +17,7 @@ import java.net.URI;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/cliente")
+@RequestMapping("/clientes")
 public class CadastrarClienteControlller {
 
     private final ClienteDtoMapper clienteMapper;
@@ -25,6 +25,7 @@ public class CadastrarClienteControlller {
 
     @PostMapping
     public ResponseEntity<ClienteResponse> cadastrarCliente(@RequestBody CadastrarClienteRequest cadastrarClienteRequest) {
+
         Cliente cliente = clienteMapper.toCliente(cadastrarClienteRequest);
 
         Cliente clienteCadastrado = cadastrarClienteUseCase.cadastrarCliente(cliente);

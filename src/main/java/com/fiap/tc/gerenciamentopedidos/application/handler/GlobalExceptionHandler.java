@@ -51,4 +51,18 @@ public class GlobalExceptionHandler {
 
         return new ResponseEntity<>(erro, status);
     }
+
+    @ExceptionHandler(NullPointerException.class)
+    public ResponseEntity<ErroCustomizado> handleNullPointerException(NullPointerException ex, HttpServletRequest request) {
+        HttpStatus status = HttpStatus.INTERNAL_SERVER_ERROR; // ou outro status que você considere apropriado
+        ErroCustomizado erro = new ErroCustomizado(
+                Instant.now(),
+                "Um erro inesperado ocorreu: " + ex.getMessage(), // Mensagem personalizada
+                status.value(),
+                request.getRequestURI()
+        );
+
+        return new ResponseEntity<>(erro, status);
+    }
+
 }

@@ -1,4 +1,4 @@
-package com.fiap.tc.gerenciamentopedidos.application.input;
+package com.fiap.tc.gerenciamentopedidos.domain.input;
 
 public record CadastrarClienteRequest(
          Long clienteId,

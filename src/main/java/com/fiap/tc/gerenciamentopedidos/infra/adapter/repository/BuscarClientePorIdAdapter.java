@@ -8,11 +8,11 @@ import com.fiap.tc.gerenciamentopedidos.infra.repository.ClienteRepository;
 import org.springframework.stereotype.Component;
 
 @Component
-public class BuscaClientePorIdAdapter implements BuscarClientePorIdInterface {
+public class BuscarClientePorIdAdapter implements BuscarClientePorIdInterface {
     private final ClienteRepository clienteRepository;
     private final ClienteEntityMapper clienteEntityMapper;
 
-    public BuscaClientePorIdAdapter(ClienteRepository clienteRepository, ClienteEntityMapper clienteEntityMapper) {
+    public BuscarClientePorIdAdapter(ClienteRepository clienteRepository, ClienteEntityMapper clienteEntityMapper) {
         this.clienteRepository = clienteRepository;
         this.clienteEntityMapper = clienteEntityMapper;
     }

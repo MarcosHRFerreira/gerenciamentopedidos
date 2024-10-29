@@ -49,6 +49,10 @@ public class Cliente {
         if(uf == null || uf.isEmpty() ) {
             throw new IllegalArgumentException("Uf não pode ser nulo ou vazio");
         }
+        if(uf.length() > 2 ) {
+            throw new IllegalArgumentException("Uf inválida");
+        }
+
         if(cidade == null || cidade.isEmpty() ) {
             throw new IllegalArgumentException("Cidade não pode ser nulo ou vazio");
         }
